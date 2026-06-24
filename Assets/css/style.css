@@ -131,14 +131,14 @@ body.loaded {
 .navbar {
     padding: 10px;
     position: sticky;
-    top: 15px;
-    margin: 20px;
+    top: 10px;
+    margin: 10px;
     z-index: 1000;
     background: rgba(255, 255, 255);
     backdrop-filter: blur(25px);
     transition: all 0.3s ease;
     border: solid 1px #e0e0e0;
-    border-radius: 50px;
+    border-radius: 10px;
 }
 
 
@@ -173,19 +173,19 @@ body.loaded {
     align-items: center;
     color: #000;
     font-size: 14px;
-    border-radius: 50px;
+    border-radius: 10px;
 }
 
 .nav-link:hover {
     transition: 0.3s;
     background: #f5f5f5;
-    border-radius: 50px;
+    border-radius: 10px;
 }
 
 .nav-link:focus,
 .nav-link.active {
     background: #e0e0e0 !important;
-    border-radius: 50px;
+    border-radius: 10px;
     transition: 0.3s;
 }
 
@@ -250,8 +250,8 @@ body.loaded {
 @media(max-width:991px) {
     .dropdown-menu {
         position: absolute !important;
-        left: auto !important;
-        right: 0;
+        left: 0;
+        right: auto !important;
         min-width: 50px;
         transition: 0.3s;
     }
@@ -453,7 +453,7 @@ footer a:hover {
 }
 
 .search-box input {
-    border-radius: 50px;
+    border-radius: 10px;
 }
 
 .search-btn {
@@ -475,6 +475,7 @@ footer a:hover {
 
 .search-btn .material-symbols-outlined {
     font-size: 20px;
+    color: #000;
 }
 
 .dark-mode .search-btn .material-symbols-outlined {
