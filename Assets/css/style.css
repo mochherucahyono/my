@@ -129,7 +129,7 @@ body {
     background: rgba(255, 255, 255);
     backdrop-filter: blur(25px);
     transition: all 0.3s ease;
-    border: solid 1px #e0e0e0;
+    border-bottom: solid 1px #e0e0e0;
 }
 
 
