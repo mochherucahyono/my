@@ -9,7 +9,7 @@ fetch("Components/footer.html")
 
     });
 
-/* Fade In */
+/* 
 
 window.addEventListener(
     "load",
@@ -20,7 +20,6 @@ window.addEventListener(
         );
 
     });
-/* Smooth Scroll */
 document.querySelectorAll("a").forEach(link => {
 
     link.addEventListener(
@@ -30,35 +29,34 @@ document.querySelectorAll("a").forEach(link => {
             const href =
                 this.getAttribute("href");
 
-            /* Skip */
+            
 
-            if (
-                href.startsWith("#") ||
-                this.target === "_blank"
-            ) {
+if (
+    href.startsWith("#") ||
+    this.target === "_blank"
+) {
 
-                return;
+    return;
 
-            }
+}
 
-            e.preventDefault();
+e.preventDefault();
 
-            document.body.classList.remove(
-                "loaded"
-            );
+document.body.classList.remove(
+    "loaded"
+);
 
-            setTimeout(() => {
+setTimeout(() => {
 
-                window.location = href;
+window.location = href;
 
-            }, 300);
+}, 300);
 
-        });
+});
 
 });
 
 
-/* Fitur Jam */
 function updateTime() {
 
     let now = new Date();
@@ -108,4 +106,4 @@ ${now.getFullYear()}`;
 
 updateTime();
 
-setInterval(updateTime, 1000);
+setInterval(updateTime, 1000);*/
