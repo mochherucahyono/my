@@ -1,5 +1,5 @@
 /* Footer */
-fetch("Components/footer.html")
+fetch("components/footer.html")
     .then(response => response.text())
     .then(data => {
 
@@ -20,6 +20,7 @@ window.addEventListener(
         );
 
     });
+/* Smooth Scroll */
 document.querySelectorAll("a").forEach(link => {
 
     link.addEventListener(
@@ -55,42 +56,7 @@ document.querySelectorAll("a").forEach(link => {
         });
 
 });
-/* Srolled */
-window.addEventListener("scroll", function() {
 
-    const navbar = document.querySelector(".navbar");
-
-    if (window.scrollY > 20) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
-    }
-
-    const tooltipTriggerList =
-        document.querySelectorAll('[data-bs-toggle="tooltip"]');
-
-    const tooltipList = [...tooltipTriggerList].map(
-        tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)
-    );
-});
-/* Untuk Navbar Collapse */
-window.addEventListener("scroll", function() {
-
-    const navbar = document.querySelector(".navbar-collapse");
-
-    if (window.scrollY > 20) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
-    }
-
-    const tooltipTriggerList =
-        document.querySelectorAll('[data-bs-toggle="tooltip"]');
-
-    const tooltipList = [...tooltipTriggerList].map(
-        tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)
-    );
-});
 
 /* Fitur Jam */
 function updateTime() {

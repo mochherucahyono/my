@@ -2,15 +2,7 @@
 body {
     font-family: "Roboto", sans-serif;
     background: #fff;
-    transform: scale(1);
-    transform-origin: top center;
-    opacity: 0;
-    transition: opacity .35s;
-    font-size: small;
-}
-
-body.loaded {
-    opacity: 1;
+    font-size: 95% !important;
 }
 
 
@@ -131,14 +123,13 @@ body.loaded {
 .navbar {
     padding: 10px;
     position: sticky;
-    top: 10px;
-    margin: 10px;
+    top: 0;
+    margin: 0;
     z-index: 1000;
     background: rgba(255, 255, 255);
     backdrop-filter: blur(25px);
     transition: all 0.3s ease;
     border: solid 1px #e0e0e0;
-    border-radius: 10px;
 }
 
 
@@ -152,9 +143,11 @@ body.loaded {
 
 /* muncul saat scroll */
 
-.navbar.scrolled {
+
+/* .navbar.scrolled {
     box-shadow: 0 1px 20px rgba(0, 0, 0, 0.15);
 }
+ */
 
 .logo {
     width: 40px;
@@ -167,37 +160,31 @@ body.loaded {
 
 .nav-link {
     text-decoration: none;
-    padding: 10px;
+    padding: 5px;
     transition: 0.3s;
     display: flex;
     align-items: center;
-    color: #000;
-    font-size: 14px;
-    border-radius: 10px;
+    color: gray !important;
 }
 
 .nav-link:hover {
-    transition: 0.3s;
-    background: #f5f5f5;
-    border-radius: 10px;
+    color: #000 !important;
 }
 
-.nav-link:focus,
 .nav-link.active {
-    background: #e0e0e0 !important;
-    border-radius: 10px;
-    transition: 0.3s;
+    color: #000 !important;
+    border-bottom: solid 3px #000 !important;
+    border-radius: 0px;
 }
 
 .dark-mode .nav-link:hover {
-    transition: 0.3s;
-    background: #333;
+    color: #fff !important;
 }
 
-.dark-mode .nav-link:focus,
 .dark-mode .nav-link.active {
-    background: #333 !important;
-    transition: 0.3s;
+    color: #fff !important;
+    border-bottom: solid 3px #fff !important;
+    border-radius: 0px;
 }
 
 .dark-mode .nav-link {
@@ -214,7 +201,7 @@ body.loaded {
     min-width: 50px;
     backdrop-filter: blur(20px);
     border-radius: 5px;
-    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .dark-mode .dropdown-menu {
@@ -227,24 +214,20 @@ body.loaded {
 
 .dropdown-item:hover {
     background: #f5f5f5;
-    transition: 0.3s;
 }
 
 .dropdown-menu .dropdown-item {
     display: flex;
     align-items: center;
-    font-size: 14px;
     margin-right: 5px;
 }
 
 .nav-item.dropdown .nav-link.show {
     color: #000;
-    transition: 0.3s;
 }
 
 .dark-mode .nav-item.dropdown .nav-link.show {
     color: #fff !important;
-    transition: 0.3s;
 }
 
 @media(max-width:991px) {
@@ -253,7 +236,6 @@ body.loaded {
         left: 0;
         right: auto !important;
         min-width: 50px;
-        transition: 0.3s;
     }
 }
 
@@ -265,7 +247,6 @@ body.loaded {
 
 .custom-link {
     color: #000 !important;
-    transition: 0.3s;
 }
 
 .dark-mode .custom-link {
@@ -281,7 +262,6 @@ body.loaded {
 .btn-custom {
     display: flex;
     align-items: center;
-    font-size: 14px;
     background: #f5f5f5;
     border-radius: 5px;
     border: solid 1px #cdcdcd;
@@ -289,14 +269,12 @@ body.loaded {
 
 .btn-custom:hover {
     background: #f0f0f0;
-    transition: 0.3s;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     border: solid 1px #cdcdcd;
 }
 
 .btn-custom:focus {
     background: #e0e0e0 !important;
-    transition: 0.3s;
 }
 
 .dark-mode .btn-custom {
@@ -306,14 +284,12 @@ body.loaded {
 
 .dark-mode .btn-custom:hover {
     background: #3a3a3a;
-    transition: 0.3s;
     box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
 }
 
 .dark-mode .btn-custom:focus {
     color: #000;
     background: #3a3a3a;
-    transition: 0.3s;
 }
 
 
@@ -357,11 +333,11 @@ footer a:hover {
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 0 1px 1px #cdcdcd;
 }
 
 .card:hover {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s;
 }
 
 .dark-mode .card:hover {
@@ -393,11 +369,11 @@ footer a:hover {
     margin-bottom: 10px;
     background-color: rgb(255, 255, 255);
     cursor: pointer;
+    box-shadow: 0 1px 1px #cdcdcd;
 }
 
 .card-home:hover {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
 }
 
 .dark-mode .card-home {
@@ -408,7 +384,10 @@ footer a:hover {
 .dark-mode .card-home:hover {
     color: #fff;
     box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1);
-    transition: all 0.1s;
+}
+
+.card-about {
+    box-shadow: 0 1px 1px #cdcdcd;
 }
 
 
@@ -417,15 +396,14 @@ footer a:hover {
 .form-control,
 .pesan {
     border: 1px solid rgba(0, 0, 0, 0.1);
-    font-size: 14px;
     padding: 8px;
-    border-radius: 10px;
+    border-radius: 20px;
     background: #ffffff;
 }
 
 .form-control:focus {
     border: 1px solid #cdcccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 5px #cdcdcd;
 }
 
 .dark-mode .form-control,
@@ -434,14 +412,9 @@ footer a:hover {
     color: #f0f0f0;
 }
 
-.dark-mode .form-control:hover {
-    border: 1px solid #cdcccc;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
-
 .dark-mode .form-control:focus {
     border: 1px solid #cdcccc;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 1px 5px #cdcdcd;
 }
 
 
@@ -453,7 +426,12 @@ footer a:hover {
 }
 
 .search-box input {
-    border-radius: 10px;
+    box-shadow: inset 0 1px 1px #cdcdcd;
+    border-radius: 50px;
+}
+
+.search-box input:focus {
+    box-shadow: inset 0 1px 5px #cdcdcd;
 }
 
 .search-btn {
