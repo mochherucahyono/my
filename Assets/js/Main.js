@@ -1,5 +1,5 @@
 /* Footer */
-fetch("components/footer.html")
+fetch("Components/footer.html")
     .then(response => response.text())
     .then(data => {
 
