@@ -5,7 +5,8 @@ const daftarQuotes = [
     '"Ada dua cara untuk menulis program bebas error; hanya cara ketiga yang berhasil."',
     '"Bukan bug namanya, itu adalah fitur yang tidak sengaja terdokumentasi."',
     '"Kopi mengubah tebakan menjadi kode program."',
-    '"Sebelum memikirkan optimasi kode, pastikan kodenya jalan dulu."'
+    '"Sebelum memikirkan optimasi kode, pastikan kodenya jalan dulu."',
+    '"Kesederhanaan adalah bentuk tertinggi dari kecanggihan. Kompleksitas dikelola oleh sistem, bukan dibebankan kepada pengguna."'
 ];
 
 // 2. Fungsi untuk memilih dan menampilkan quote acak
